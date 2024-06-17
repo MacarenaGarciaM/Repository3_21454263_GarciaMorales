@@ -1,6 +1,7 @@
 package cl.example.lab3_21454263_garcia;
 
 import java.util.List;
+import java.util.Objects;
 
 
 public class TDA_line_21454263_garciamorales {
@@ -33,6 +34,7 @@ public class TDA_line_21454263_garciamorales {
         return sections;
     }
 
+
     public int lineLength() {
         int acum = 0;
         for (TDA_section_21454263_garciamorales sections: this.sections) {
@@ -40,16 +42,27 @@ public class TDA_line_21454263_garciamorales {
         }
         return acum;
     }
-    public int lineSectionCost(String station1Name, String station2Name) {
-        for (TDA_section_21454263_garciamorales section : sections) {
-            if ((section.getPoint1().getName().equals(station1Name) && section.getPoint2().getName().equals(station2Name)) ||
-                    (section.getPoint1().getName().equals(station2Name) && section.getPoint2().getName().equals(station1Name))) {
-                return section.getCost();
+    public int lineSectionLength(String station1Name, String station2Name) {
+        boolean bandera = false;
+        int totalDistance = 0;
+
+        for (TDA_section_21454263_garciamorales section : this.sections) {
+            if (section.getPoint1().getName().equals(station1Name)) {
+                bandera = true;
+                totalDistance += section.getDistance();
+            } else if (bandera) {
+                totalDistance += section.getDistance();
+                if (section.getPoint2().getName().equals(station2Name)) {
+                    break;
+                }
+            } else if (section.getPoint2().getName().equals(station2Name)) {
+                bandera = true;
+                totalDistance += section.getDistance();
             }
         }
 
-        return -1; // Si no se encuentra la sección entre las estaciones especificadas
-    }
 
+        return totalDistance;
+    }
 
 }
