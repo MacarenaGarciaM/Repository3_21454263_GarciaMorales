@@ -64,5 +64,12 @@ public class TDA_line_21454263_garciamorales {
 
         return totalDistance;
     }
+    public int lineCost() {
+        int totalCost = 0;
+        for (TDA_section_21454263_garciamorales section : sections) {
+            totalCost += section.getCost();
+        }
+        return totalCost;
+    }
 
 }

@@ -22,5 +22,7 @@ public class main_21454263_garciamorales {
         TDA_line_21454263_garciamorales line = new TDA_line_21454263_garciamorales(1, "Line 1", "Type A", sections);
         System.out.println("Longitud total de la línea: " + line.lineLength()); // Debería imprimir 30
         System.out.println("Longitud de la sección entre Station 1 y Station 3: " + line.lineSectionLength("Station 1", "Station 3")); // Debería imprimir 30
+        System.out.println("Costo total de la línea: " + line.lineCost()); // Debería imprimir 300
+
     }
 }
