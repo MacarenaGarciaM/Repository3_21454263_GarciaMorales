@@ -72,4 +72,16 @@ public class TDA_line_21454263_garciamorales {
         return totalCost;
     }
 
+    public int lineSectionCost(String station1Name, String station2Name) {
+        for (TDA_section_21454263_garciamorales section : sections) {
+            if ((section.getPoint1().getName().equals(station1Name) && section.getPoint2().getName().equals(station2Name)) ||
+                    (section.getPoint1().getName().equals(station2Name) && section.getPoint2().getName().equals(station1Name))) {
+                return section.getCost();
+            }
+        }
+
+        return -1;
+    }
+
+
 }
