@@ -1,5 +1,6 @@
 package cl.example.lab3_21454263_garcia;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -9,12 +10,14 @@ public class TDA_line_21454263_garciamorales {
     String name;
     String railType;
     List<TDA_section_21454263_garciamorales> sections;
+    List<TDA_train_21454263_garciamorales> AssignedTrains;
 
     public TDA_line_21454263_garciamorales (int id,String name, String railType, List<TDA_section_21454263_garciamorales> sections){
         this.id = id;
         this.name = name;
         this.railType = railType;
         this.sections = sections;
+        this.AssignedTrains = new ArrayList<>();
     }
 
     public String getName() {
@@ -124,6 +127,14 @@ public class TDA_line_21454263_garciamorales {
         }
 
         return true;
+    }
+
+    public void assignTrain(TDA_train_21454263_garciamorales train){
+        if(train == null){
+            System.out.println("El tren es nulo");
+        }else{
+            this.AssignedTrains.add(train);
+        }
     }
 
 

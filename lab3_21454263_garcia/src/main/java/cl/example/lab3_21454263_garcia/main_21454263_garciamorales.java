@@ -1,5 +1,6 @@
 package cl.example.lab3_21454263_garcia;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class main_21454263_garciamorales {
@@ -60,5 +61,14 @@ public class main_21454263_garciamorales {
             System.out.println("Hubo un error al añadir el carro en la posición 1.");
         }
 
+        // Prueba del método removeCar
+        System.out.println("Cantidad de carros antes de eliminar: " + train.carList.size());
+        train.removeCar(1); // Remover el carro en la posición 1
+        System.out.println("Cantidad de carros después de eliminar: " + train.carList.size());
+
+       
     }
+
+
 }
+

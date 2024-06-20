@@ -1,7 +1,9 @@
 package cl.example.lab3_21454263_garcia;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class TDA_subway_21454263_garciamorales {
     int id;
@@ -36,6 +38,25 @@ public class TDA_subway_21454263_garciamorales {
 
     public List<TDA_driver_21454263_garciamorales> getDrivers() {
         return drivers;
+    }
+
+
+    public void addTrain(List<TDA_train_21454263_garciamorales> trainList) {
+        boolean bandera = true;
+        if(trainList == null || trainList.isEmpty()) {
+            System.out.println("La lista no puede estar vacía");
+        }
+        for(TDA_train_21454263_garciamorales nuevoTren : trainList){
+            for (TDA_train_21454263_garciamorales trenExistente : trains){
+                if(trenExistente.id == nuevoTren.id ){
+                    System.out.println("El ID se encuentra repetido");
+                    bandera = false;
+                }
+            }
+            if(bandera){
+                trains.add(nuevoTren);
+            }
+        }
     }
 
 }
