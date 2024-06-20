@@ -27,6 +27,12 @@ public class main_21454263_garciamorales {
         System.out.println("Longitud de la sección entre Station 1 y Station 3: " + line.lineSectionLength("Station 1", "Station 3")); // Debería imprimir 30
         System.out.println("Costo de la sección entre Station 1 y Station 2: " + line.lineSectionCost("Station 1", "Station 2")); // Debería imprimir 100
 
+        if (line.isLine()) {
+            System.out.println("La línea es válida.");
+        } else {
+            System.out.println("La línea no es válida.");
+        }
+
 
         // Crear carros para el tren
         TDA_pcar_21454263_garciamorales car1 = new TDA_pcar_21454263_garciamorales(1, 100, "Model X", "TrainMaker", "t");
@@ -41,6 +47,18 @@ public class main_21454263_garciamorales {
 
         // Crear instancia del tren
         TDA_train_21454263_garciamorales train = new TDA_train_21454263_garciamorales(1, "TrainMaker", 120, 5, cars);
+        TDA_train_21454263_garciamorales train2 = new TDA_train_21454263_garciamorales(2, "TrainMaker", 125, 10, cars);
+
+        // Añadir un carro en una posición específica
+        TDA_pcar_21454263_garciamorales newCar = new TDA_pcar_21454263_garciamorales(4, 200, "Model A", "TrainMaker", "c");
+        train.addCar(newCar, 1); // Añadir un carro en la posición 1
+
+        // Verificar que el carro se haya añadido correctamente
+        if (train.carList.get(1).equals(newCar)) {
+            System.out.println("El carro se añadió correctamente en la posición 1.");
+        } else {
+            System.out.println("Hubo un error al añadir el carro en la posición 1.");
+        }
 
     }
 }

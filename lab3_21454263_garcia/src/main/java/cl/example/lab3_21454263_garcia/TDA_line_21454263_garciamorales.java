@@ -83,5 +83,50 @@ public class TDA_line_21454263_garciamorales {
         return -1;
     }
 
+    public void lineAddSection(TDA_section_21454263_garciamorales section) {
+        if(!this.sections.contains(section)){
+            this.sections.add(section);
+        }
+    }
+    public boolean isCircular() {
+        if (sections.isEmpty()) {
+            return false; // Si la lista de secciones está vacía, la línea no puede ser circular.
+        }
+
+        TDA_section_21454263_garciamorales primeraSection = sections.get(0);
+        TDA_section_21454263_garciamorales ultimaSection = sections.get(sections.size() - 1);
+
+        return primeraSection.getPoint1().equals(ultimaSection.getPoint2());
+    }
+
+    public boolean isLine(){
+        for (int i = 0; i < this.sections.size() - 1 ; i++){
+            TDA_section_21454263_garciamorales sectionActual= this.sections.get(i);
+            TDA_station_21454263_garciamorales stationActual= sectionActual.getPoint2();
+            TDA_section_21454263_garciamorales nextsection = this.sections.get(i + 1);
+            TDA_station_21454263_garciamorales nextstation = nextsection.getPoint1();
+            if(! Objects.equals(stationActual, nextstation)){
+                return false;
+            }
+        }
+        TDA_section_21454263_garciamorales sectionInicial = this.sections.get(0);
+        TDA_section_21454263_garciamorales sectionFinal = this.sections.get(this.sections.size() - 1 );
+        TDA_station_21454263_garciamorales stationInicial = sectionInicial.getPoint1();
+        TDA_station_21454263_garciamorales stationFinal = sectionFinal.getPoint2();
+        if (isCircular()) {
+            if (!Objects.equals(stationInicial.getStationType(), "t") || !Objects.equals(stationFinal.getStationType(), "t")) {
+                return false;
+            }
+        } else {
+            if (!Objects.equals(stationInicial.getStationType(), "t") || !Objects.equals(stationFinal.getStationType(), "t")) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+
+
 
 }

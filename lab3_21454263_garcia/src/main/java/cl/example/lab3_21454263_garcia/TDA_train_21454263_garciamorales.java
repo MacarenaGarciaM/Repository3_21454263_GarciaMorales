@@ -38,5 +38,17 @@ public class TDA_train_21454263_garciamorales {
         return carList;
     }
 
+    public void addCar(TDA_pcar_21454263_garciamorales car, int position) {
+        if (position < 0) {
+            System.out.println("La posición no puede ser negativa.");
+        }
+
+        if (position > carList.size()) {
+            carList.add(car);  // Si la posición es mayor que el tamaño de la lista, se añade al final
+        } else {
+            carList.add(position, car);  // Añadir el carro en la posición especificada
+        }
+    }
+
 
 }
