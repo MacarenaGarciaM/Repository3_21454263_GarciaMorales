@@ -12,6 +12,13 @@ public class TDA_line_21454263_garciamorales {
     List<TDA_section_21454263_garciamorales> sections;
     List<TDA_train_21454263_garciamorales> AssignedTrains;
 
+    /**
+     * Descripción: Método constructor de una línea
+     * @param id
+     * @param name
+     * @param railType
+     * @param sections
+     */
     public TDA_line_21454263_garciamorales (int id,String name, String railType, List<TDA_section_21454263_garciamorales> sections){
         this.id = id;
         this.name = name;
@@ -37,7 +44,10 @@ public class TDA_line_21454263_garciamorales {
         return sections;
     }
 
-
+    /**
+     * Descripción: Método que permite determinar el largo total de una línea
+     * @return
+     */
     public int lineLength() {
         int acum = 0;
         for (TDA_section_21454263_garciamorales sections: this.sections) {
@@ -45,6 +55,13 @@ public class TDA_line_21454263_garciamorales {
         }
         return acum;
     }
+
+    /**
+     * Descripción: Método que permite determinar el trayecto entre una estación origen y una final (largo total entre una estación origen y una estación destino).
+     * @param station1Name
+     * @param station2Name
+     * @return
+     */
     public int lineSectionLength(String station1Name, String station2Name) {
         boolean bandera = false;
         int totalDistance = 0;
@@ -67,6 +84,11 @@ public class TDA_line_21454263_garciamorales {
 
         return totalDistance;
     }
+
+    /**
+     * Descripción: Función que permite determinar el costo total (monetario) de recorrer una línea.
+     * @return
+     */
     public int lineCost() {
         int totalCost = 0;
         for (TDA_section_21454263_garciamorales section : sections) {
@@ -74,6 +96,13 @@ public class TDA_line_21454263_garciamorales {
         }
         return totalCost;
     }
+
+    /**
+     * Descripción:  Método que permite determinar el costo de un trayecto entre una estación origen y una final.
+     * @param station1Name
+     * @param station2Name
+     * @return
+     */
 
     public int lineSectionCost(String station1Name, String station2Name) {
         for (TDA_section_21454263_garciamorales section : sections) {
@@ -86,11 +115,25 @@ public class TDA_line_21454263_garciamorales {
         return -1;
     }
 
-    public void lineAddSection(TDA_section_21454263_garciamorales section) {
-        if(!this.sections.contains(section)){
-            this.sections.add(section);
+    /**
+     * Descripción: Método que permite añadir tramos a una línea.
+     * @param sections
+     */
+
+    public void lineAddSection(List<TDA_section_21454263_garciamorales> sections) {
+        for(TDA_section_21454263_garciamorales section : sections){
+            if(!this.sections.contains(section)){
+                this.sections.add(section);
+            }
+
         }
     }
+
+
+    /**
+     * Método que verifica si una línea es circular
+     * @return
+     */
     public boolean isCircular() {
         if (sections.isEmpty()) {
             return false; // Si la lista de secciones está vacía, la línea no puede ser circular.
@@ -102,6 +145,10 @@ public class TDA_line_21454263_garciamorales {
         return primeraSection.getPoint1().equals(ultimaSection.getPoint2());
     }
 
+    /**
+     * Descripción:  Método que permite determinar si un elemento cumple con las restricciones señaladas en apartados anteriores en relación a las estaciones y tramos para poder conformar una línea.
+     * @return
+     */
     public boolean isLine(){
         for (int i = 0; i < this.sections.size() - 1 ; i++){
             TDA_section_21454263_garciamorales sectionActual= this.sections.get(i);
@@ -129,6 +176,11 @@ public class TDA_line_21454263_garciamorales {
         return true;
     }
 
+    /**
+     *
+     * @param train
+     */
+
     public void assignTrain(TDA_train_21454263_garciamorales train){
         if(train == null){
             System.out.println("El tren es nulo");
@@ -137,6 +189,15 @@ public class TDA_line_21454263_garciamorales {
         }
     }
 
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Line id: ").append(id).append(", Name: ").append(name).append(", Type: ").append("\n");
+        sb.append("Sections: \n");
+        for(TDA_section_21454263_garciamorales section : sections){
+            sb.append(section.toString()).append("\n");
+        }
+        return sb.toString();
+    }
 
 
 

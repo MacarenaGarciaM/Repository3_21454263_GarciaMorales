@@ -12,6 +12,11 @@ public class TDA_subway_21454263_garciamorales {
     List<TDA_train_21454263_garciamorales> trains;
     List<TDA_driver_21454263_garciamorales> drivers;
 
+    /**
+     * Descripción: Crea una nueva red de metro
+     * @param id
+     * @param name
+     */
     public TDA_subway_21454263_garciamorales(int id, String name){
         this.id=id;
         this.name=name;
@@ -40,7 +45,10 @@ public class TDA_subway_21454263_garciamorales {
         return drivers;
     }
 
-
+    /**
+     * Descripción: Añade uno o más trenes a una red de metro
+     * @param trainList
+     */
     public void addTrain(List<TDA_train_21454263_garciamorales> trainList) {
         boolean bandera = true;
         if(trainList == null || trainList.isEmpty()) {
@@ -58,5 +66,9 @@ public class TDA_subway_21454263_garciamorales {
             }
         }
     }
+
+
+
+
 
 }

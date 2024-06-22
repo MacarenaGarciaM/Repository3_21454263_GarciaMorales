@@ -27,5 +27,9 @@ public class TDA_station_21454263_garciamorales {
     public String getStationType() {
         return stationType;
     }
+
+    public String toString (){
+        return "Station id: " + id + ", name: " + name + ", stationType: " + stationType + ", stopTime" + stopTime;
+    }
 }
 

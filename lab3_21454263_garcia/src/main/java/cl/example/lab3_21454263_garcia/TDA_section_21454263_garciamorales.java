@@ -1,5 +1,5 @@
 package cl.example.lab3_21454263_garcia;
-
+import java.util.List;
 public class TDA_section_21454263_garciamorales {
     TDA_station_21454263_garciamorales point1;
     TDA_station_21454263_garciamorales point2;
@@ -28,5 +28,11 @@ public class TDA_section_21454263_garciamorales {
     public int getDistance() {
         return distance;
     }
+
+    public String toString(){
+        return "Section 1: " + point1.getName() + ", Section2" + point2.getName() + ", Distance: " + distance + ", Cost: " + cost;
+    }
+
+
 
 }

@@ -22,4 +22,9 @@ public class TDA_driver_21454263_garciamorales {
     public String getTrainMaker() {
         return trainMaker;
     }
+
+    @Override
+    public String toString() {
+        return "Driver id: " + id + ", name: " + name + ", trainMaker" + trainMaker;
+    }
 }

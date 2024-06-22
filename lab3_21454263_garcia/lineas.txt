@@ -1,0 +1,2 @@
+1;Linea 1;Tipo A;1, "Station 1", t, 5:2, "Station 2", c, 5:10:3;3, "Station 3", t, 5:4, "Station 4", c, 5:10:3
+2;Linea 2;Tipo A;1, "Station 1", t, 5:2, "Station 2", c, 5:10:3;3, "Station 3", t, 5:4, "Station 4", c, 5:10:3

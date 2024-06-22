@@ -66,6 +66,13 @@ public class main_21454263_garciamorales {
         train.removeCar(1); // Remover el carro en la posición 1
         System.out.println("Cantidad de carros después de eliminar: " + train.carList.size());
 
+        // Prueba del método isTrain
+        if (train.isTrain()) {
+            System.out.println("El tren es válido");
+        } else {
+            System.out.println("El tren no es válido");
+        }
+
        
     }
 

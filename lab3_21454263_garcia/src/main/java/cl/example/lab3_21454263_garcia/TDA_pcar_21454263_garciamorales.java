@@ -34,4 +34,8 @@ public class TDA_pcar_21454263_garciamorales {
     public String getCarType() {
         return carType;
     }
+
+    public String toString(){
+        return "Pcar id: " + id + ", passangerCapacity: " + passengerCapacity + ", Model: " + model + ", trainMaker: " + trainMaker + ", carType: " + carType;
+    }
 }
