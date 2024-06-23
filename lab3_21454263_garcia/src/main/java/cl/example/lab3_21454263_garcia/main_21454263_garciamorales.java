@@ -73,9 +73,30 @@ public class main_21454263_garciamorales {
             System.out.println("El tren no es válido");
         }
 
-       
+
+        System.out.println("Capacidad total del tren: " + train.fetchCapacity());
+
+
+        TDA_subway_21454263_garciamorales subway = new TDA_subway_21454263_garciamorales(1, "Metro");
+
+        // Prueba de agregar una lista de líneas
+        List<TDA_line_21454263_garciamorales> lineList = new ArrayList<>();
+        lineList.add(line);
+        subway.addLine(lineList);
+        //System.out.println("Líneas añadidas al metro: " + lineList);
+
+        // Prueba de agregar una lista de trenes
+        List<TDA_train_21454263_garciamorales> trainList = new ArrayList<>();
+        trainList.add(train);
+        trainList.add(train2);
+        subway.addTrain(trainList);
+        //System.out.println("Trenes añadidos al metro: " + trainList);
+
+        // Crear instancia de un conductor
+        TDA_driver_21454263_garciamorales driver = new TDA_driver_21454263_garciamorales(1, "John Doe", "License 123");
+        List<TDA_driver_21454263_garciamorales> driverList = new ArrayList<>();
+        driverList.add(driver);
+
     }
-
-
 }
 

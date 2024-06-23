@@ -109,4 +109,18 @@ public class TDA_train_21454263_garciamorales {
     }
 
 
+    /**
+     * Descripción: dado un tren, entrega la capacidad máxima de pasajeros de este
+     * @return
+     */
+    public int fetchCapacity() {
+        int totalCapacity = 0;
+        for (TDA_pcar_21454263_garciamorales car : carList) {
+            totalCapacity += car.getPassengerCapacity();
+        }
+        return totalCapacity;
+    }
+
+
+
 }

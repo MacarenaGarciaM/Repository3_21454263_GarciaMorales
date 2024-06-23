@@ -11,6 +11,7 @@ public class TDA_subway_21454263_garciamorales {
     List<TDA_line_21454263_garciamorales> lines;
     List<TDA_train_21454263_garciamorales> trains;
     List<TDA_driver_21454263_garciamorales> drivers;
+    List<combinaciones_21454263_garciamorales> combinaciones;
 
     /**
      * Descripción: Crea una nueva red de metro
@@ -68,7 +69,26 @@ public class TDA_subway_21454263_garciamorales {
     }
 
 
-
-
+    /**
+     * Descripción: Añade una o más lineas a una red de metro
+     * @param lineList
+     */
+    public void addLine(List<TDA_line_21454263_garciamorales> lineList){
+        boolean bandera = true;
+        if(lineList == null || lineList.isEmpty()) {
+            System.out.println("La lista no puede estar vacía");
+        }
+        for(TDA_line_21454263_garciamorales nuevaLinea : lineList){
+            for (TDA_line_21454263_garciamorales LineaExistente : lines){
+                if(LineaExistente.id == nuevaLinea.id ){
+                    System.out.println("El ID se encuentra repetido");
+                    bandera = false;
+                }
+            }
+            if(bandera){
+                lines.add(nuevaLinea);
+            }
+        }
+    }
 
 }

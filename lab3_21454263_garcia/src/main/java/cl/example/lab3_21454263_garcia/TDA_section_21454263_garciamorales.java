@@ -30,7 +30,7 @@ public class TDA_section_21454263_garciamorales {
     }
 
     public String toString(){
-        return "Section 1: " + point1.getName() + ", Section2" + point2.getName() + ", Distance: " + distance + ", Cost: " + cost;
+        return "Station 1: " + point1.getName() + ", Station 2: " + point2.getName() + ", Distance: " + distance + ", Cost: " + cost;
     }
 
 
