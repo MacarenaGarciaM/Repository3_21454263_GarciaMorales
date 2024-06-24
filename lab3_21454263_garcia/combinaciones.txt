@@ -1,0 +1,1 @@
+1,"Tobalaba","t",5:2,"Universidad de Chile","c" ,50,"Plaza Egaña","t",5:2, 

@@ -1,0 +1,3 @@
+1;Ambar Gonzales;1;163450000000;1;5
+2;Kristian García;2;1634250000000;3;7
+3;Javiera Espinoza;3;1634500000000;4;6

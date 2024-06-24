@@ -1,2 +1,3 @@
-1;Linea 1;Tipo A;1, "Station 1", t, 5:2, "Station 2", c, 5:10:3;3, "Station 3", t, 5:4, "Station 4", c, 5:10:3
-2;Linea 2;Tipo A;1, "Station 1", t, 5:2, "Station 2", c, 5:10:3;3, "Station 3", t, 5:4, "Station 4", c, 5:10:3
+1;Linea 1;UIC 60 ASCE;1, "Tobalaba", "t", 5:2, "Salvador", "c", 5:10:3;3, "Universidad de Chile", "c", 5:4, "USACH", "t", 5:10:3
+2;Linea 2;100 R.E;1, "Plaza Egaña", "t", 5:2, "Chile España", "c", 5:10:3;3, "Universidad de Chile", "c", 5:4, "Lo Cruzat", "t", 5:10:3
+3;Linea 3;100 R.E;1, "Quilin", "t", 5:2, "Las Torres", "c", 5:10:3;3, "Plaza Egaña", "c", 5:4, "Tobalaba", "t", 5:10:3

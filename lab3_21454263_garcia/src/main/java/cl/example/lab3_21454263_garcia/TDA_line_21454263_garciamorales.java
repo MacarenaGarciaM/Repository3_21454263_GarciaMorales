@@ -27,21 +27,21 @@ public class TDA_line_21454263_garciamorales {
         this.AssignedTrains = new ArrayList<>();
     }
 
+    /**
+     * Descripción: Obtiene el nombre de la linea
+     * @return
+     */
     public String getName() {
 
         return name;
     }
 
+    /**
+     * Descripción:Obtiene el id de la línea
+     * @return
+     */
     public int getId() {
         return id;
-    }
-
-    public String getRailType() {
-        return railType;
-    }
-
-    public List<TDA_section_21454263_garciamorales> getSections() {
-        return sections;
     }
 
     /**
@@ -131,7 +131,7 @@ public class TDA_line_21454263_garciamorales {
 
 
     /**
-     * Método que verifica si una línea es circular
+     * Descripción: Método que verifica si una línea es circular
      * @return
      */
     public boolean isCircular() {
@@ -177,7 +177,7 @@ public class TDA_line_21454263_garciamorales {
     }
 
     /**
-     *
+     *Descripción: añade un tren a una lista para asignar los trenes
      * @param train
      */
 
@@ -189,6 +189,10 @@ public class TDA_line_21454263_garciamorales {
         }
     }
 
+    /**
+     * Descripción: método para pasar la linea a String
+     * @return
+     */
     public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append("Line id: ").append(id).append(", Name: ").append(name).append(", Type: ").append("\n");

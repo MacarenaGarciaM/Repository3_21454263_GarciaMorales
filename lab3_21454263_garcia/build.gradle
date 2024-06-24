@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.5.5'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'application'
 }
 
 group = 'cl.example'
@@ -21,3 +22,10 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+application {
+	mainClass = 'cl.example.lab3_21454263_garcia.main_21454263_garciamorales'
+}
+
+run {
+	standardInput = System.in
+}

@@ -1,0 +1,3 @@
+1;Siemens;100;5;1;1,100,ModelX,Siemens,t;2,80,ModelY,Siemens,c;3,80,ModelY,Siemens,t
+2;Bombardier;120;6;2;3,120,ModelA,Bombardier,t;4,90,ModelB,Bombardier,c;5,100,ModelA,Bombardier,t
+3;Alstom;110;4;1;6,150,ModelC,Alstom,t;7,100,ModelD,Alstom,c;8,150,ModelC,Alstom,t

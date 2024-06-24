@@ -7,6 +7,14 @@ public class TDA_pcar_21454263_garciamorales {
     String trainMaker;
     String carType;
 
+    /**
+     * Descripción: Genera un objeto de tipo PassengerCar
+     * @param id
+     * @param passengerCapacity
+     * @param model
+     * @param trainMaker
+     * @param carType
+     */
     public TDA_pcar_21454263_garciamorales (int id, int passengerCapacity, String model, String trainMaker, String carType){
         this.id = id;
         this.passengerCapacity = passengerCapacity;
@@ -15,26 +23,34 @@ public class TDA_pcar_21454263_garciamorales {
         this.carType = carType;
     }
 
-    public int getId() {
-        return id;
-    }
-
+    /**
+     * Descripción: obtiene la capacidad de pasajeros
+     * @return
+     */
     public int getPassengerCapacity() {
         return passengerCapacity;
     }
 
+    /**
+     * Descripción:Obtiene el modelo
+     * @return
+     */
     public String getModel() {
         return model;
     }
 
-    public String getTrainMaker() {
-        return trainMaker;
-    }
-
+    /**
+     * Descripción: Obtiene el tipo de car
+     * @return
+     */
     public String getCarType() {
         return carType;
     }
 
+    /**
+     * Descripción: Método para pasar el pcar a String
+     * @return
+     */
     public String toString(){
         return "Pcar id: " + id + ", passangerCapacity: " + passengerCapacity + ", Model: " + model + ", trainMaker: " + trainMaker + ", carType: " + carType;
     }

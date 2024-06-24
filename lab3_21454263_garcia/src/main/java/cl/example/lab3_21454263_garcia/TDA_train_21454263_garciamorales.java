@@ -33,25 +33,22 @@ public class TDA_train_21454263_garciamorales {
 
     }
 
+    /**
+     * Descripción: Obtiene el id
+     * @return
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Descripción:Obtiene el trainmaker
+     * @return
+     */
     public String getTrainMaker() {
         return trainMaker;
     }
 
-    public int getSpeed() {
-        return speed;
-    }
-
-    public int getStationStayTime() {
-        return stationStayTime;
-    }
-
-    public List<TDA_pcar_21454263_garciamorales> getCarList() {
-        return carList;
-    }
 
     /**
      * Descripción: Añade un carro de pasajeros en un tren en la posición establecida.
@@ -119,6 +116,57 @@ public class TDA_train_21454263_garciamorales {
             totalCapacity += car.getPassengerCapacity();
         }
         return totalCapacity;
+    }
+
+    /**
+     * Descripción: añade un driver a una lista para asignarlos
+     * @param driver
+     */
+    public void assignDriver(TDA_driver_21454263_garciamorales driver){
+        if(driver == null){
+            System.out.println("El driver no existe");
+        }else{
+            this.AssignedDrivers.add(driver);
+        }
+    }
+
+    /**
+     * Descripción:Método para pasar un driver a string
+     * @return
+     */
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Train id: ").append(id).append(", trainMaker: ").append(trainMaker).append(", Speed: ").append(speed).append(", station Stay Time: ").append(stationStayTime);
+        sb.append("Pcars: \n");
+        for(TDA_pcar_21454263_garciamorales car : carList){
+            sb.append(car.toString()).append("\n");
+        }
+        return sb.toString();
+
+    }
+
+    /**
+     * Descripción: asgina el departureTime
+     * @param departureTime
+     */
+    public void setDepartureTime(Date departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    /**
+     * Descripción: Asigna el departurestationid
+     * @param departureStationId
+     */
+    public void setDepartureStation(int departureStationId) {
+        this.departureStationId = departureStationId;
+    }
+
+    /**
+     * Descripción: Asgina el arrivalstationid
+     * @param arrivalStationId
+     */
+    public void setArrivalStation(int arrivalStationId) {
+        this.arrivalStationId = arrivalStationId;
     }
 
 
