@@ -1,6 +1,6 @@
 package cl.example.lab3_21454263_garcia;
 import java.util.List;
-public class TDA_section_21454263_garciamorales {
+public class TDA_section_21454263_garciamorales implements sectionInterface{
     TDA_station_21454263_garciamorales point1;
     TDA_station_21454263_garciamorales point2;
     int distance;

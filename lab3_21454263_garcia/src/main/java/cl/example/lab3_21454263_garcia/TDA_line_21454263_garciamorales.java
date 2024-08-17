@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class TDA_line_21454263_garciamorales {
+public class TDA_line_21454263_garciamorales implements lineInterface {
     int id;
     String name;
     String railType;

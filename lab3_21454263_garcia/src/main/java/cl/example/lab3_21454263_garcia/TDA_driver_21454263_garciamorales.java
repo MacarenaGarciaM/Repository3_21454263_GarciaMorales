@@ -1,6 +1,6 @@
 package cl.example.lab3_21454263_garcia;
 
-public class TDA_driver_21454263_garciamorales {
+public class TDA_driver_21454263_garciamorales implements driverInterface{
     int id;
     String name;
     String trainMaker;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class TDA_train_21454263_garciamorales {
+public class TDA_train_21454263_garciamorales implements trainInterface{
     int id;
     String trainMaker;
     int speed;

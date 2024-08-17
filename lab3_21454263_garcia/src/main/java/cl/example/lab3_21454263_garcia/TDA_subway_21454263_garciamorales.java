@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class TDA_subway_21454263_garciamorales {
+public class TDA_subway_21454263_garciamorales implements subwayInterface{
     int id;
     String name;
     List<TDA_line_21454263_garciamorales> lines;

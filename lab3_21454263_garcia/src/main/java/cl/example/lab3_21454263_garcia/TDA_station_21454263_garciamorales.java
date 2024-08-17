@@ -1,6 +1,6 @@
 package cl.example.lab3_21454263_garcia;
 
-public class TDA_station_21454263_garciamorales {
+public class TDA_station_21454263_garciamorales implements stationInterface{
     int id;
     String name;
     String stationType;
